@@ -7,6 +7,9 @@
 # Usage: sudo ./setup.sh [whitelist_file] [blocklist_file]
 # Re-run any time to refresh DNS results (it is idempotent).
 
+# Re-launch under bash if started with sh/dash (they don't support pipefail)
+[ -n "${BASH_VERSION:-}" ] || exec bash "$0" "$@"
+
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
