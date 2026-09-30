@@ -1,0 +1,16 @@
+# Domain / URL patterns
+
+https://ctf.htbchennai.in
+http://ctf.htbchennai.in
+http://challs.htbchennai.in:*
+https://challs.htbchennai.in:*
+http://*.challs.htbchennai.in:*
+https://*.challs.htbchennai.in:*
+
+# Explicit Port Whitelist
+
+TCP: 80, 443
+TCP: 5000
+TCP: 8000-8020
+TCP: 9000-9999
+TCP: 30000-31000
