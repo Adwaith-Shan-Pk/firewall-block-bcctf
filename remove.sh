@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 # Removes everything created by setup.sh (Linux / nftables)
+# Re-launch under bash if started with sh/dash (they don't support pipefail)
+[ -n "${BASH_VERSION:-}" ] || exec bash "$0" "$@"
+
 set -euo pipefail
 
 TABLE="ctf_fw"
